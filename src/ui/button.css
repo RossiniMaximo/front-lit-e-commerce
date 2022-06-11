@@ -1,0 +1,8 @@
+.buttonContainer {
+  width: 80px;
+}
+@media (min-width: 900px) {
+  .buttonContainer {
+    width: 110px;
+  }
+}

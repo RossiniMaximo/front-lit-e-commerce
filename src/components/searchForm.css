@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  gap: 20px;
+}
+button {
+  background-color: #3333cc;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 2px;
+  color: white;
+}
+.button:hover {
+  background-color: red;
+}
+.button:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.inputContainer {
+  width: 200px;
+}
+@media (min-width: 900px) {
+  .inputContainer {
+    width: 300px;
+  }
+}
+
+.input:focus {
+  outline: none;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+}

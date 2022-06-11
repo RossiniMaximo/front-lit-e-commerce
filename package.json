@@ -1,0 +1,33 @@
+{
+  "name": "fifth-class",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^9.3.0",
+    "live-server": "^1.2.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "6",
+    "recoil": "^0.7.3",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "nuka-carousel": "^5.1.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^3.3.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.2"
+  }
+}

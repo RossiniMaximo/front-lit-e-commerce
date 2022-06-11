@@ -1,0 +1,16 @@
+.mainContainer {
+  margin-bottom: 25px;
+}
+.pageTitle {
+  text-align: center;
+}
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .cardsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

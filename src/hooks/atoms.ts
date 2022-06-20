@@ -48,3 +48,17 @@ export const logStatusState = atom({
   key: "logStatusState",
   default: false,
 });
+
+export const userState = atom({
+  key: "userState",
+  default: {
+    fullname: "",
+    email: "",
+    cart: [],
+  },
+});
+
+export const cart = atom({
+  key: "cart",
+  default: [],
+});

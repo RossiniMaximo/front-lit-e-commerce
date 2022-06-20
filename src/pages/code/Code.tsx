@@ -1,13 +1,22 @@
 import React from "react";
-import { Button } from "../ui/Button";
+import { Button } from "../../ui/Button";
+import { getToken } from "../../lib/api";
+import { useUserData } from "../../hooks";
+import { useNavigate } from "react-router-dom";
 
 import css from "./code.css";
 
 export function Code() {
-  function handleSubmit(e) {
+  const navigate = useNavigate();
+  const user = useUserData();
+  const email = user.email;
+  async function handleSubmit(e) {
     e.preventDefault();
     const code = e.target.code.value;
-    // Check if code is valid
+    const token = await getToken(email, code);
+    if (token) {
+      navigate("/");
+    }
   }
 
   return (

@@ -6,3 +6,10 @@
     width: 110px;
   }
 }
+.button:hover {
+  cursor: pointer;
+  background-color: #686868;
+}
+.button {
+  transition: 0.5s ease;
+}

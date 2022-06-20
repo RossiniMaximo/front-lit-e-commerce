@@ -5,9 +5,11 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^9.3.0",
+    "framer-motion": "^6.3.11",
     "live-server": "^1.2.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
     "react-router-dom": "6",
     "recoil": "^0.7.3",
     "ts-loader": "^9.3.0",
@@ -23,6 +25,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
     "nuka-carousel": "^5.1.0",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",

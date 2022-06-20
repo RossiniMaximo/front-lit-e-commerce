@@ -17,24 +17,22 @@ body {
   }
 }
 
-.headerOptions {
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
+.lowResolitionNavBar {
+  height: 100px;
   margin-top: 20px;
-  align-items: center;
-  text-align: center;
-  background-color: #3333cc;
-  color: white;
-  width: 335px;
-  border-radius: 5px;
-  border: solid 2px;
 }
+
 @media (min-width: 900px) {
-  .headerOptions {
-    width: 100%;
+  .lowResolitionNavBar {
     display: none;
   }
+}
+
+.hmbgMenu {
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
 .highResolutionHeader {
@@ -49,17 +47,26 @@ body {
     margin-left: 100px;
   }
 }
+.link:hover {
+  color: #3333cc;
+  cursor: pointer;
+}
 .link {
   text-decoration: none;
   color: white;
+  transition: 0.7s ease;
 }
 
 .profile {
   font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 .home {
   margin-left: 10px;
   font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 @media (min-width: 900px) {
   .home {
@@ -67,17 +74,24 @@ body {
   }
 }
 
-.cart {
+.signUp {
   font-size: 20px;
   margin-right: 10px;
+  color: white;
+  text-decoration: none;
 }
 @media (min-width: 900px) {
-  .cart {
+  .signUp {
     margin-right: 50px;
   }
 }
 
 .footer {
   background-color: #686868;
-  height: 125px;
+  height: 200px;
+}
+@media (min-width: 900px) {
+  .footer {
+    height: 200px;
+  }
 }

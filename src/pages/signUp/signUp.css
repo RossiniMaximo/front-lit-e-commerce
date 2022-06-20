@@ -30,3 +30,19 @@
   align-items: center;
   gap: 40px;
 }
+.button:hover {
+  background-color: red;
+}
+.button {
+  cursor: pointer;
+}
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.linkStyle {
+  text-decoration: none;
+  color: #3333cc;
+  margin-top: 50px;
+}

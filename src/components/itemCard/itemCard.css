@@ -1,16 +1,22 @@
-.container {
+.mainContainer {
+  padding: 20px;
+}
+
+.cardContainer {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
   border: solid 4px #686868;
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;
 }
+
 @media (min-width: 900px) {
-  .container {
-    width: 400px;
+  .cardContainer {
+    width: 350px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
     margin-top: 50px;
   }
@@ -24,7 +30,7 @@
 @media (min-width: 900px) {
   .picture {
     width: 100%;
-    height: fit-content;
+    object-fit: scale-down;
   }
 }
 
@@ -33,10 +39,6 @@
   justify-content: space-between;
   padding: 25px;
   border-top: solid 2px;
-}
-@media (min-width: 900px) {
-  .propertiesContainer {
-  }
 }
 
 .title {
@@ -83,6 +85,12 @@
   }
 }
 
+.addCart:hover {
+  cursor: pointer;
+}
+.addCart:hover {
+  color: #3333cc;
+}
 .addCart {
   padding: 10px;
   margin: 0;

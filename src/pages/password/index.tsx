@@ -1,23 +1,19 @@
 import React from "react";
-import css from "./signUp.css";
-import { LogFormulary } from "../components/LogFormulary";
+import { LogFormulary } from "../../components/logForm/LogFormulary";
+import css from "./password.css";
+import { updatePassword } from "../../lib/api";
 import { useNavigate } from "react-router-dom";
-import { createOrFindUser } from "../lib/api";
 
-export function SignUp() {
+export function Password() {
   const navigate = useNavigate();
-  async function handleSend({ email, password }) {
-    const fullname = "maxi";
-    const result = await createOrFindUser(email, fullname, password);
-    console.log("result : ", result);
-
-    /*  navigate("/code"); */
+  async function handlePasswordChange({ email, password }) {
+    await updatePassword(email, password);
+    navigate("/");
   }
   return (
     <div className={css.container}>
       <div className={css.formContainer}>
         <LogFormulary
-          onSend={handleSend}
           children="Send"
           buttonStyle={css.button}
           formStyle={css.form}
@@ -27,6 +23,7 @@ export function SignUp() {
           label="Email"
           label2="Password"
           label3="Repeat password"
+          onSend={handlePasswordChange}
         />
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React from "react";
-import { Textfield } from "../ui/TextField";
-import { Button } from "../ui/Button";
+import { Textfield } from "../../ui/TextField";
+import { Button } from "../../ui/Button";
+import { useUserState } from "../../hooks";
+import { Link } from "react-router-dom";
 
 type LogFormularyProps = {
   children: string;
@@ -16,12 +18,16 @@ type LogFormularyProps = {
 };
 
 export function LogFormulary(props: LogFormularyProps) {
+  const [userData, setUserData] = useUserState();
   function handleSubmit(e) {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     const repeated_password = e.target.repeat_password.value;
     if (password === repeated_password) {
+      setUserData({ ...userData, email });
+      console.log("user data después de ser seteada :", userData);
+
       props.onSend({ email, password });
     }
   }

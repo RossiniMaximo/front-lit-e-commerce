@@ -9,7 +9,9 @@ type ButtonProps = {
 export function Button(props: ButtonProps) {
   return (
     <div className={css.buttonContainer}>
-      <button className={props.className}>{props.children}</button>
+      <button className={props.className && css.button}>
+        {props.children}
+      </button>
     </div>
   );
 }

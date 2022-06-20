@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "../ui/Button";
-import { Textfield } from "../ui/TextField";
+import { Button } from "../../ui/Button";
+import { Textfield } from "../../ui/TextField";
 import css from "./searchForm.css";
 
 type SearchFormProps = {

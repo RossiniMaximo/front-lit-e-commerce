@@ -1,9 +1,9 @@
 import React from "react";
-import { useResultItem, usePicturesState } from "../hooks";
+import css from "./home.css";
+import { useLocalStoragePictures } from "../../hooks";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import css from "./item.css";
 
 const settings = {
   infinite: true,
@@ -13,6 +13,7 @@ const settings = {
   initialSlide: 0,
   autoScroll: true,
   autoplay: true,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1024,
@@ -20,6 +21,7 @@ const settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
+        autoScroll: true,
       },
     },
     {
@@ -40,22 +42,22 @@ const settings = {
   ],
 };
 
-export function Item() {
-  const result = useResultItem();
-  console.log("result : ", result);
-
-  const pictures = usePicturesState();
-  console.log("pictures : ", pictures);
-
+export function Home() {
+  const storagedPics = useLocalStoragePictures();
+  const parsedStoragedPicst = JSON.parse(storagedPics);
   return (
     <div className={css.container}>
-      <h4>{result.title}</h4>
-      <h4>${result.price}</h4>
-      <Slider {...settings}>
-        {pictures?.map((pic) => {
-          return <img src={pic.url} alt="" />;
-        })}
-      </Slider>
+      <div className={css.sliderContainer}>
+        <Slider {...settings}>
+          {parsedStoragedPicst?.map((p) => {
+            return (
+              <div className={css.imgContainer}>
+                <img src={p.url} alt="" className={css.img} />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 }

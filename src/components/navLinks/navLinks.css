@@ -22,7 +22,7 @@
 .a {
   border-bottom: solid 2px #3333cc;
   text-decoration: none;
-  color: white;
+  color: bisque;
 }
 @media (min-width: 900px) {
   .a {
@@ -30,8 +30,7 @@
     margin-left: 35px;
   }
   .a:hover {
-    color: #3333cc;
-    transition: color 0.5s ease;
-    text-decoration: underline #3333cc;
+    color: black;
+    transition: color 1s ease;
   }
 }

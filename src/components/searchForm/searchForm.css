@@ -2,14 +2,7 @@
   display: flex;
   gap: 20px;
 }
-button {
-  background-color: #3333cc;
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  border: solid 2px;
-  color: white;
-}
+
 .button:hover {
   background-color: red;
 }
@@ -19,8 +12,9 @@ button {
   transform: translateY(4px);
 }
 .inputContainer {
-  width: 200px;
+  width: 150px;
 }
+
 @media (min-width: 900px) {
   .inputContainer {
     width: 300px;
@@ -31,6 +25,7 @@ button {
   outline: none;
 }
 .input {
+  border: solid 1px;
   width: 100%;
   padding: 10px;
 }

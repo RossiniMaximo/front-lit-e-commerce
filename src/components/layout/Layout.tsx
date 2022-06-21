@@ -19,40 +19,39 @@ export function Layout() {
   }
   const closeMobileMenu = () => setIsActive(false);
   const hamburgerIcon = (
-    <IoMdMenu
+    <div
       className={css.hmbgMenu}
-      size="40px"
-      color="white"
       onClick={() => {
         !setIsActive(!isActive);
       }}
-    />
+    >
+      <IoMdMenu size="40px" color="white" />
+    </div>
   );
   const closedIcon = (
-    <MdClose
+    <div
       className={css.hmbgMenu}
-      size="40px"
-      color="white"
       onClick={() => {
         !setIsActive(!isActive);
       }}
-    />
+    >
+      <MdClose size="40px" color="white" />
+    </div>
   );
   return (
     <div>
       <header className={css.header}>
-        <div>
-          <SearchForm onSearch={goToSearch} />
-        </div>
-        <nav className={css.highResolutionHeader}>
-          <NavLinks />
-        </nav>
-
         <nav className={css.lowResolitionNavBar}>
           {isActive ? closedIcon : hamburgerIcon}
           {isActive && (
             <NavLinks isMobile={true} closeMobileMenu={closeMobileMenu} />
           )}
+        </nav>
+        <div>
+          <SearchForm onSearch={goToSearch} />
+        </div>
+        <nav className={css.highResolutionHeader}>
+          <NavLinks />
         </nav>
       </header>
       <Outlet />

@@ -1,13 +1,15 @@
 body {
   margin: 0;
 }
+
 .header {
   background-color: #686868;
   height: 140px;
   padding: 15px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 
 @media (min-width: 900px) {
@@ -18,8 +20,6 @@ body {
 }
 
 .lowResolitionNavBar {
-  height: 100px;
-  margin-top: 20px;
 }
 
 @media (min-width: 900px) {
@@ -29,10 +29,8 @@ body {
 }
 
 .hmbgMenu {
-  position: absolute;
-  right: 5%;
-  cursor: pointer;
-  margin-right: 10px;
+  display: flex;
+  justify-content: end;
 }
 
 .highResolutionHeader {
@@ -89,9 +87,4 @@ body {
 .footer {
   background-color: #686868;
   height: 200px;
-}
-@media (min-width: 900px) {
-  .footer {
-    height: 200px;
-  }
 }

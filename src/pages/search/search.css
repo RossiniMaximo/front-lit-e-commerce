@@ -1,9 +1,7 @@
 .mainContainer {
   margin-bottom: 25px;
 }
-.pageTitle {
-  text-align: center;
-}
+
 .cardsContainer {
   display: flex;
   flex-direction: column;

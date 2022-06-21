@@ -7,7 +7,6 @@ export function Search() {
   const results = useSearchResults();
   return (
     <div className={css.mainContainer}>
-      <h1 className={css.pageTitle}> {results?.length} results</h1>
       <div className={css.cardsContainer}>
         {results?.map((r) => {
           return (

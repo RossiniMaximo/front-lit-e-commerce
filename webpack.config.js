@@ -1,5 +1,7 @@
+const webpack = require("webpack");
 const path = require("path");
 const LiveServer = require("live-server");
+
 const dev = process.env.NODE_ENV == "development";
 
 if (dev) {
@@ -12,6 +14,12 @@ if (dev) {
 module.exports = {
   watch: dev,
   entry: "./src/index.tsx",
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      API_URL: "http://localhost:3000/api",
+      DEBUG: false,
+    }),
+  ],
   module: {
     rules: [
       {
@@ -49,4 +57,3 @@ module.exports = {
     filename: "bundle.js",
   },
 };
-/* Target has to be ES5 when using webpack */

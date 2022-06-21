@@ -46,12 +46,12 @@ body {
   }
 }
 .link:hover {
-  color: #3333cc;
+  color: black;
   cursor: pointer;
 }
 .link {
   text-decoration: none;
-  color: white;
+  color: bisque;
   transition: 0.7s ease;
 }
 
@@ -87,4 +87,37 @@ body {
 .footer {
   background-color: #686868;
   height: 200px;
+}
+
+.list_link {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0;
+}
+@media (min-width: 960px) {
+  .list_link {
+    padding: 120px 20px 0 10px;
+    gap: 5px;
+  }
+}
+
+.link_container {
+}
+.first_link {
+  margin-right: 35px;
+}
+
+.link_content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.link {
+  color: bisque;
+  text-decoration: none;
+}
+.second_link {
 }

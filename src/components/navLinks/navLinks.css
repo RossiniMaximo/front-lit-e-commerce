@@ -12,7 +12,7 @@
     top: 100px;
     right: 0;
     width: 100%;
-    border-top: solid 2px #3333cc;
+    border-top: solid 2px #000000;
   }
 }
 .li {
@@ -20,7 +20,7 @@
 }
 
 .a {
-  border-bottom: solid 2px #3333cc;
+  border-bottom: solid 2px #000000;
   text-decoration: none;
   color: bisque;
 }
@@ -32,5 +32,13 @@
   .a:hover {
     color: black;
     transition: color 1s ease;
+  }
+}
+.ul {
+  border-bottom: solid 2px;
+}
+@media (min-width: 900px) {
+  .ul {
+    border-bottom: none;
   }
 }

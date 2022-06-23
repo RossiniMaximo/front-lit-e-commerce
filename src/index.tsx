@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import { Router } from "./router";
-import { CircleLoader } from "./components/circleLoader";
+import { Spinner } from "../src/components/spinner";
 
 ReactDOM.render(
-  <Suspense fallback={<CircleLoader />}>
+  <Suspense fallback={<Spinner />}>
     <RecoilRoot>
       <BrowserRouter>
         <Router />

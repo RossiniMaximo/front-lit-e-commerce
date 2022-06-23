@@ -1,6 +1,6 @@
 .container {
   border: solid 2px;
-  margin-top: 200px;
+  margin-top: 145px;
   height: 60vh;
 }
 @media (min-width: 900px) {

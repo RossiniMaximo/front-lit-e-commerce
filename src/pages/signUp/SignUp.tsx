@@ -9,6 +9,7 @@ export function SignUp() {
   async function handleSend({ email, password }) {
     const fullname = "maxi";
     const result = await createOrFindUser(email, fullname, password);
+    alert("Code was sent to your email!");
     navigate("/code");
   }
   return (

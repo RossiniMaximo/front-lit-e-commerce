@@ -21,6 +21,7 @@
 .priceContainer {
 }
 /* this media query is on porpouse  using max instead of the usual min*/
+
 @media (max-width: 1000px) {
   .priceContainer {
     width: 100%;
@@ -32,6 +33,7 @@
 }
 .link {
   text-decoration: none;
+  color: #000;
 }
 
 .deleteIcon {

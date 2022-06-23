@@ -26,8 +26,6 @@ export function LogFormulary(props: LogFormularyProps) {
     const repeated_password = e.target.repeat_password.value;
     if (password === repeated_password) {
       setUserData({ ...userData, email });
-      console.log("user data después de ser seteada :", userData);
-
       props.onSend({ email, password });
     }
   }

@@ -14,6 +14,7 @@ const settings = {
   initialSlide: 0,
   autoScroll: true,
   autoplay: true,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1024,
